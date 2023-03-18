@@ -26,8 +26,6 @@ namespace Test_with_AP.Controllers
             }
             return Ok(dotPattern);
 
-
-
         }
 
         [HttpGet("circle/{radius}/{resolution}")]
