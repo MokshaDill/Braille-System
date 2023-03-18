@@ -21,8 +21,31 @@ namespace With_AP
         {
             string w = numericUpDown1.Text;
             string h = numericUpDown2.Text;
-            string url = $"https://localhost:44341/WeatherForecast/rectangle/{w}/{h}";
-            GetApi(url);
+            String url;
+            
+
+            switch (comboBox1.SelectedIndex)
+            {
+                case 0:
+                    url = $"https://localhost:44341/WeatherForecast/rectangle/{w}/{h}";
+                    GetApi(url);
+                    break;
+
+                case 1:
+                    url = $"https://localhost:44341/WeatherForecast/circle/{w}/{h}";
+                    GetApi(url);
+                    break;
+            }
+        }
+
+        private void richTextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
         }
 
         private async void GetApi(string url)
@@ -48,9 +71,6 @@ namespace With_AP
 
         }
 
-        private void richTextBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }
