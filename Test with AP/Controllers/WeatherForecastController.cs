@@ -159,7 +159,7 @@ namespace Test_with_AP.Controllers
         [HttpGet("text/{tex}")]
         public IActionResult Square(String tex)
         {
-            string dotPattern = "";
+            //string dotPattern = "";
             string braille = "";
             int count = 0;
 
