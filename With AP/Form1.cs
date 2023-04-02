@@ -26,7 +26,9 @@ namespace With_AP
             string h = numericUpDown1.Text;
             string w = numericUpDown2.Text;
             string r = numericUpDown3.Text;
-            string b = numericUpDown4.Text;
+            string re = numericUpDown4.Text;
+
+            
             
 
             String url;
@@ -45,12 +47,17 @@ namespace With_AP
                     break;
 
                 case 2:
-                    url = $"https://localhost:44341/WeatherForecast/circle/{r}";
+                    url = $"https://localhost:44341/WeatherForecast/circle/{r}/{re}";
                     GetApi(url);
                     break;
 
                 case 3:
                     url = $"https://localhost:44341/WeatherForecast/Trangle/{h}";
+                    GetApi(url);
+                    break;
+
+                case 4:
+                    url = $"https://localhost:44341/WeatherForecast/hexagon/{w}";
                     GetApi(url);
                     break;
             }

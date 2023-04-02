@@ -1,8 +1,11 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Org.BouncyCastle.Tsp;
 using SkiaSharp;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.IO;
 using System.Security.Policy;
+using System.Text;
 using static MyProject.References;
 
 
@@ -50,7 +53,7 @@ namespace Test_with_AP.Controllers
             {
                 for (int j = 0; j < width; j++)
                 {
-                    dotPattern += "•   ";    //x=x+1 == x+=1
+                    dotPattern += "•  ";    //x=x+1 == x+=1
                     count++;
                 }
                 dotPattern += "\n";
@@ -60,83 +63,163 @@ namespace Test_with_AP.Controllers
 
         }
 
-        [HttpGet("circle/{radius}")]
-        public IActionResult Circle(int radius)
+        //[HttpGet("circle/{radius}")]
+        //public IActionResult Circle(int radius)
+        //{
+        //    string dotPattern = " ";
+        //    int count = 0;
+
+
+        //    //for (int i = 1; i <= radius/2;i++)
+        //    //{
+        //    //    if (i == 1 || i == radius)//if (i == 0 or i== radius){ radius - 1 + print(".")}
+        //    //    {
+        //    //        for (int k = 0; k < radius; k++)
+        //    //        {
+        //    //            dotPattern += " ";
+        //    //        }
+        //    //        dotPattern += ".";
+        //    //        dotPattern += "\n";
+
+        //    //    }
+        //    //    else
+        //    //    {
+        //    //        //for (int j = 1; j <= 2; j++)  //1st dot = radius -x       <---- space calculation 2nd dot = radius + x
+
+        //    //            int mn = (radius*radius) - ((radius - i) * (radius - i));   //2x=2radius^2-(radius-i)^2  
+        //    //            int m= (int)Math.Sqrt(mn);
+        //    //            int n = (radius - m)+ (radius - m);
+        //    //            int nn = (int)2m;
+        //    //            for (int k = 0; k <= n; k++)
+        //    //            {
+        //    //                dotPattern += " ";
+        //    //            }
+        //    //            dotPattern += ".";
+
+        //    //        for (int p = 0; p <= nn; p++)
+        //    //        {
+        //    //            dotPattern += nn;
+        //    //        }
+
+        //    //        for (int k = 0; k >= n; k++)
+        //    //        {
+        //    //            dotPattern += n;
+        //    //        }
+
+
+        //    //        dotPattern += ".";
+        //    //            dotPattern += "\n";
+
+        //    //    }
+
+
+        //    //}
+
+
+
+        //    //for (int y = -radius; y <= radius; y++)
+        //    //{
+        //    //    for (int x = -radius; x <= radius; x++)
+        //    //    {
+        //    //        double distance = Math.Sqrt(x * x + y * y);
+        //    //        if (Math.Abs(distance - radius) < radius / 2)
+        //    //        {
+        //    //            dotPattern += "•";
+        //    //            count++;        
+        //    //        }
+        //    //        else
+        //    //        {
+        //    //            dotPattern += " ";
+        //    //            count++;
+        //    //        }
+        //    //    }
+        //    //    dotPattern += "\n";
+        //    //}
+
+        //    var result = new SquareResult { DotPattern = dotPattern, Count = count };
+        //    return Ok(result);
+
+
+        //}
+
+
+
+        [HttpGet("circle/{radius}/{resolution}")]
+        public IActionResult GetCircle(int radius, int resolution)
         {
-            string dotPattern = " ";
-            
+            int count = 0;
+            StringBuilder sb = new StringBuilder();
 
-            for (int i = 1; i <= radius/2;i++)
+            for (int y = -radius; y <= radius; y++)
             {
-                if (i == 1 || i == radius)//if (i == 0 or i== radius){ radius - 1 + print(".")}
+                for (int x = -radius; x <= radius; x++)
                 {
-                    for (int k = 0; k < radius; k++)
-                    {
-                        dotPattern += " ";
-                    }
-                    dotPattern += ".";
-                    dotPattern += "\n";
+                    double distance = Math.Sqrt(x * x + y * y);
 
-                }
-                else
-                {
-                    //for (int j = 1; j <= 2; j++)  //1st dot = radius -x       <---- space calculation 2nd dot = radius + x
-                    
-                        int mn = (radius*radius) - ((radius - i) * (radius - i));   //2x=2radius^2-(radius-i)^2  
-                        int m= (int)Math.Sqrt(mn);
-                        int n = (radius - m)+ (radius - m);
-                        int nn = (int)2m;
-                        for (int k = 0; k <= n; k++)
-                        {
-                            dotPattern += " ";
-                        }
-                        dotPattern += ".";
+                    bool isOnCircumference = Math.Abs(distance - radius) < 0.5;
 
-                    for (int p = 0; p <= nn; p++)
-                    {
-                        dotPattern += nn;
-                    }
-
-                    for (int k = 0; k >= n; k++)
-                    {
-                        dotPattern += n;
-                    }
-                   
-
-                    dotPattern += ".";
-                        dotPattern += "\n";
-                    
+                    sb.Append(isOnCircumference ? "." : " ");
+                    count++;
                 }
 
-            
+                sb.Append("\n");
+                count++;
             }
 
-
-
-            //for (int y = -radius; y <= radius; y++)
-            //{
-            //    for (int x = -radius; x <= radius; x++)
-            //    {
-            //        double distance = Math.Sqrt(x * x + y * y);
-            //        if (Math.Abs(distance - radius) < step / 2)
-            //        {
-            //            dotPattern += "•";
-            //        }
-            //        else
-            //        {
-            //            dotPattern += " ";
-            //        }
-            //    }
-            //    dotPattern += "\n";
-            //}
-            return Ok(dotPattern);
+          
+            var result = new SquareResult { DotPattern = sb.ToString(), Count = count };
+            return Ok(result);
         }
+
+
+
+
+        //[HttpGet("circle/{radius}/{resolution}")]
+        //public IActionResult GetCircle(int radius, int resolution)
+        //{
+        //    int centerX = radius;
+        //    int centerY = radius;
+        //    int count = 0;
+
+        //    Bitmap bitmap = new Bitmap(radius * 2 + 1, radius * 2 + 1);
+
+        //    using (Graphics graphics = Graphics.FromImage(bitmap))
+        //    {
+        //        graphics.SmoothingMode = SmoothingMode.AntiAlias;
+        //        graphics.DrawEllipse(Pens.Black, new RectangleF(0, 0, radius * 2, radius * 2));
+        //    }
+
+
+        //    StringBuilder sb = new StringBuilder();
+
+        //    for (int y = 0; y < bitmap.Height; y++)
+        //    {
+        //        for (int x = 0; x < bitmap.Width; x++)
+        //        {
+        //           double distance = Math.Sqrt((x - centerX) * (x - centerX) + (y - centerY) * (y - centerY));
+
+        //            bool isInside = distance <= radius;
+
+        //            sb.Append(isInside ? "•" : " ");
+        //            count++;
+        //        }
+
+        //        sb.Append("\n");
+        //        count++;
+        //    }
+
+
+        //    var result = new SquareResult { DotPattern = sb.ToString(), Count = count };
+        //    return Ok(result);
+        //}
+
+
 
         [HttpGet("Trangle/{height}")]
         public IActionResult Trangle(int height)
         {
             string dotPattern = "";
-
+            int count = 0;
 
             for (int row = 1; row <= height; row++)
             {
@@ -147,12 +230,58 @@ namespace Test_with_AP.Controllers
                 for (int col = 1; col <= 2 * row - 1; col++)
                 {
                     dotPattern += "•";
+                    count++;
+
                 }
                 dotPattern += "\n";
             }
 
-            return Ok(dotPattern);
+            var result = new SquareResult { DotPattern = dotPattern, Count = count };
+            return Ok(result);
         }
+
+
+
+        [HttpGet("hexagon/{size}")]
+        public IActionResult GetHexagon(int size)
+        {
+            int width = size * 2;
+            int height = size * 2 + (size - 1) * 2;
+
+            bool isInside;
+            int count = 0;
+
+            StringBuilder sb = new StringBuilder();
+
+            for (int y = 0; y < height; y++)
+            {
+                int startX = y < size ? size - y - 1 : y - size + 1;
+                int endX = y < size ? startX + width - 1 - (size - y - 1) * 2 : startX + width - 1 - (y - size + 1) * 2;
+
+               for (int x = 0; x < width; x++)
+                {
+                    isInside = x >= startX && x <= endX;
+
+                    if (isInside)
+                    {
+                        sb.Append(".");
+                        count++;
+                    }
+                    else
+                    {
+                        sb.Append(" ");
+                    }
+                }
+
+                sb.Append("\n");
+            }
+
+
+
+            var result = new SquareResult { DotPattern = sb.ToString(), Count = count };
+            return Ok(result);
+        }
+
 
 
         //text converter

@@ -9,6 +9,7 @@
 
   <ItemGroup>
     <PackageReference Include="IKVM" Version="8.4.5" />
+    <PackageReference Include="Portable.BouncyCastle" Version="1.9.0" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
   </ItemGroup>
 
