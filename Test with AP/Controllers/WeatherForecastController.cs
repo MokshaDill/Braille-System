@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using com.sun.codemodel.@internal;
+using Microsoft.AspNetCore.Mvc;
 using Org.BouncyCastle.Tsp;
 using SkiaSharp;
 using System.Drawing;
@@ -158,12 +159,20 @@ namespace Test_with_AP.Controllers
 
                     bool isOnCircumference = Math.Abs(distance - radius) < 0.5;
 
-                    sb.Append(isOnCircumference ? "." : " ");
-                    count++;
+                    if (isOnCircumference)
+                    {
+                        sb.Append(".");
+                        count++;
+                    }
+                    else
+                    {
+                        sb.Append(" ");
+                    }
+
+                    
                 }
 
                 sb.Append("\n");
-                count++;
             }
 
           
@@ -239,6 +248,46 @@ namespace Test_with_AP.Controllers
             var result = new SquareResult { DotPattern = dotPattern, Count = count };
             return Ok(result);
         }
+
+
+        [HttpGet("octagon/{size}")]
+        public IActionResult GetOctagon(int size)
+        {
+            StringBuilder sb = new StringBuilder();
+            int count = 0;  
+
+            int width = size * 2 - 1;
+            int height = size * 2 - 1;
+
+            for (int y = 0; y < height; y++)
+            {
+                int startX = y < size ? size - y - 1 : y - size + 1;
+                int endX = y < size ? startX + width - 1 - (size - y - 1) * 2 : startX + width - 1 - (y - size + 1) * 2;
+
+                for (int x = 0; x < width; x++)
+                {
+                    bool isInside = (x == startX || x == endX) && y >= size / 2 && y < height - size / 2 ||
+                                    (y == size / 2 || y == height - size / 2 - 1) && x >= size / 2 && x < width - size / 2;
+
+                   if (isInside)
+                    {
+                        sb.Append(".");
+                        count++;
+                    }
+                    else
+                    {
+                        sb.Append(" ");
+                    }
+
+                }
+
+                sb.Append("\n");
+            }
+
+            var result = new SquareResult { DotPattern = sb.ToString(), Count = count };
+            return Ok(result);
+        }
+
 
 
 

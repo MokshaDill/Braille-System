@@ -60,6 +60,11 @@ namespace With_AP
                     url = $"https://localhost:44341/WeatherForecast/hexagon/{w}";
                     GetApi(url);
                     break;
+
+                case 5:
+                    url = $"https://localhost:44341/WeatherForecast/octagon/{w}";
+                    GetApi(url);
+                    break;
             }
         }
 
