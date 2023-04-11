@@ -130,6 +130,8 @@ namespace With_AP
                 numericUpDown4.Enabled = true;
             }
 
+            // use Switch for
+
 
         }
 
