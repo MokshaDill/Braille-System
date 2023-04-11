@@ -59,5 +59,25 @@ namespace With_AP.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _1429255 {
+            get {
+                object obj = ResourceManager.GetObject("1429255", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _43f8ee9d88f1ddc3535e0f72f7dca73c {
+            get {
+                object obj = ResourceManager.GetObject("43f8ee9d88f1ddc3535e0f72f7dca73c", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

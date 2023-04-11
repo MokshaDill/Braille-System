@@ -201,5 +201,21 @@ namespace With_AP
             url = $"https://localhost:44341/WeatherForecast/text/{tex}";
             GetApi(url);
         }
+
+        private void tabControl1_DrawItem(object sender, DrawItemEventArgs e)
+        {
+            TabControl tabControl = (TabControl)sender;
+            TabPage tabPage = tabControl.TabPages[e.Index];
+
+            // Set the background color of the tab page
+            tabPage.BackColor = Color.Blue;
+
+            // Set the text color of the tab page
+            tabPage.ForeColor = Color.White;
+
+            // Draw the tab item
+            e.Graphics.FillRectangle(new SolidBrush(Color.Blue), e.Bounds);
+            e.Graphics.DrawString(tabPage.Text, tabControl.Font, new SolidBrush(Color.White), e.Bounds.X + 3, e.Bounds.Y + 3);
+        }
     }
 }

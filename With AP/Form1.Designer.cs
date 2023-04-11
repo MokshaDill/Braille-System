@@ -137,6 +137,7 @@
             // 
             this.Shapes.AutoSize = true;
             this.Shapes.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Shapes.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Shapes.Location = new System.Drawing.Point(174, 16);
             this.Shapes.Name = "Shapes";
             this.Shapes.Size = new System.Drawing.Size(56, 20);
@@ -197,15 +198,18 @@
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.DrawMode = System.Windows.Forms.TabDrawMode.OwnerDrawFixed;
             this.tabControl1.Location = new System.Drawing.Point(0, -1);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.Padding = new System.Drawing.Point(77, 15);
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(408, 452);
             this.tabControl1.TabIndex = 13;
+            this.tabControl1.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.tabControl1_DrawItem);
             // 
             // tabPage1
             // 
+            this.tabPage1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tabPage1.BackgroundImage")));
             this.tabPage1.Controls.Add(this.groupBox1);
             this.tabPage1.Controls.Add(this.comboBox1);
             this.tabPage1.Controls.Add(this.Shapes);
@@ -220,6 +224,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.BackgroundImage = global::With_AP.Properties.Resources._43f8ee9d88f1ddc3535e0f72f7dca73c;
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.numericUpDown4);
@@ -237,6 +242,7 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.BackgroundImage = global::With_AP.Properties.Resources._43f8ee9d88f1ddc3535e0f72f7dca73c;
             this.tabPage2.Controls.Add(this.groupBox2);
             this.tabPage2.Controls.Add(this.button3);
             this.tabPage2.Location = new System.Drawing.Point(4, 53);
@@ -249,6 +255,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.BackgroundImage = global::With_AP.Properties.Resources._43f8ee9d88f1ddc3535e0f72f7dca73c;
             this.groupBox2.Controls.Add(this.textBox1);
             this.groupBox2.Location = new System.Drawing.Point(49, 66);
             this.groupBox2.Name = "groupBox2";
@@ -314,7 +321,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImage = global::With_AP.Properties.Resources._1429255;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label6);
