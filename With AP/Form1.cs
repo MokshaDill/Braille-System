@@ -26,7 +26,7 @@ namespace With_AP
             string h = numericUpDown1.Text;
             string w = numericUpDown2.Text;
             string r = numericUpDown3.Text;
-            string re = numericUpDown4.Text;
+            //string re = numericUpDown4.Text;
 
             
             
@@ -47,7 +47,7 @@ namespace With_AP
                     break;
 
                 case 2:
-                    url = $"https://localhost:44341/WeatherForecast/circle/{r}/{re}";
+                    url = $"https://localhost:44341/WeatherForecast/circle/{r}";
                     GetApi(url);
                     break;
 
@@ -81,38 +81,38 @@ namespace With_AP
                 numericUpDown1.Enabled = true;//numericUpDown1
                 numericUpDown2.Enabled = false;
                 numericUpDown3.Enabled = false;
-                numericUpDown4.Enabled = false;
+                //numericUpDown4.Enabled = false;
             }
             else if(comboBox1.SelectedIndex == 1) 
             {
                 numericUpDown1.Enabled = true;
                 numericUpDown2.Enabled = true;
                 numericUpDown3.Enabled = false;
-                numericUpDown4.Enabled = false;
+                //numericUpDown4.Enabled = false;
             }else if(comboBox1.SelectedIndex == 2)
             {
                 numericUpDown1.Enabled = false;
                 numericUpDown2.Enabled = false;
                 numericUpDown3.Enabled = true;
-                numericUpDown4.Enabled = true;
+               // numericUpDown4.Enabled = true;
             }else if(comboBox1.SelectedIndex == 3)
             {
                 numericUpDown1.Enabled = true;
                 numericUpDown2.Enabled = false;
                 numericUpDown3.Enabled = false;
-                numericUpDown4.Enabled = false;
+                //numericUpDown4.Enabled = false;
             }else if(comboBox1.SelectedIndex == 4)
             {
                 numericUpDown1.Enabled = false;
                 numericUpDown2.Enabled = true;
                 numericUpDown3.Enabled = false;
-                numericUpDown4.Enabled = false;
+               // numericUpDown4.Enabled = false;
             }else if(comboBox1.SelectedIndex == 5)
             {
                 numericUpDown1.Enabled = false;
                 numericUpDown2.Enabled = true;
                 numericUpDown3.Enabled = false;
-                numericUpDown4.Enabled = false;
+                //numericUpDown4.Enabled = false;
             }
             //else
             //{

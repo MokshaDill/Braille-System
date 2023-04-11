@@ -145,10 +145,11 @@ namespace Test_with_AP.Controllers
 
 
 
-        [HttpGet("circle/{radius}/{resolution}")]
-        public IActionResult GetCircle(int radius, int resolution)
+        [HttpGet("circle/{radius}")]
+        public IActionResult GetCircle(int radius)
         {
             int count = 0;
+            
             StringBuilder sb = new StringBuilder();
 
             for (int y = -radius; y <= radius; y++)
@@ -161,7 +162,7 @@ namespace Test_with_AP.Controllers
 
                     if (isOnCircumference)
                     {
-                        sb.Append(".");
+                        sb.Append("•");
                         count++;
                     }
                     else
@@ -169,13 +170,13 @@ namespace Test_with_AP.Controllers
                         sb.Append("  ");
                     }
 
-                    
+
                 }
 
                 sb.Append("\n");
             }
 
-          
+
             var result = new SquareResult { DotPattern = sb.ToString(), Count = count };
             return Ok(result);
         }
