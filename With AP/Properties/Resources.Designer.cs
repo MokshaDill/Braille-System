@@ -73,9 +73,39 @@ namespace With_AP.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _14292551 {
+            get {
+                object obj = ResourceManager.GetObject("14292551", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _43f8ee9d88f1ddc3535e0f72f7dca73c {
             get {
                 object obj = ResourceManager.GetObject("43f8ee9d88f1ddc3535e0f72f7dca73c", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _43f8ee9d88f1ddc3535e0f72f7dca73c1 {
+            get {
+                object obj = ResourceManager.GetObject("43f8ee9d88f1ddc3535e0f72f7dca73c1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _458594 {
+            get {
+                object obj = ResourceManager.GetObject("458594", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

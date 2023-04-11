@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
             this.button1 = new System.Windows.Forms.Button();
@@ -52,6 +51,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
+            this.button4 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
@@ -178,9 +178,9 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(23, 215);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(40, 20);
+            this.label5.Size = new System.Drawing.Size(79, 20);
             this.label5.TabIndex = 11;
-            this.label5.Text = "Base";
+            this.label5.Text = "Resolution";
             // 
             // label1
             // 
@@ -207,7 +207,7 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tabPage1.BackgroundImage")));
+            this.tabPage1.BackgroundImage = global::With_AP.Properties.Resources._43f8ee9d88f1ddc3535e0f72f7dca73c1;
             this.tabPage1.Controls.Add(this.groupBox1);
             this.tabPage1.Controls.Add(this.comboBox1);
             this.tabPage1.Controls.Add(this.Shapes);
@@ -239,7 +239,7 @@
             // 
             // tabPage2
             // 
-            this.tabPage2.BackgroundImage = global::With_AP.Properties.Resources._43f8ee9d88f1ddc3535e0f72f7dca73c;
+            this.tabPage2.BackgroundImage = global::With_AP.Properties.Resources._43f8ee9d88f1ddc3535e0f72f7dca73c1;
             this.tabPage2.Controls.Add(this.groupBox2);
             this.tabPage2.Controls.Add(this.button3);
             this.tabPage2.Location = new System.Drawing.Point(4, 53);
@@ -312,13 +312,30 @@
             this.textBox2.TabIndex = 16;
             this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.Transparent;
+            this.button4.BackgroundImage = global::With_AP.Properties.Resources._458594;
+            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.ForeColor = System.Drawing.Color.Transparent;
+            this.button4.Image = global::With_AP.Properties.Resources._458594;
+            this.button4.ImageAlign = System.Drawing.ContentAlignment.TopRight;
+            this.button4.Location = new System.Drawing.Point(773, 2);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(25, 25);
+            this.button4.TabIndex = 17;
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.BackgroundImage = global::With_AP.Properties.Resources._1429255;
+            this.BackgroundImage = global::With_AP.Properties.Resources._14292551;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button4);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.button2);
@@ -376,5 +393,6 @@
         private Button button3;
         private Label label6;
         private TextBox textBox2;
+        private Button button4;
     }
 }

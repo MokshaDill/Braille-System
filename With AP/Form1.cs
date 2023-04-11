@@ -75,62 +75,52 @@ namespace With_AP
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //Square checking 
+
             if (comboBox1.SelectedIndex == 0)
             {
+                numericUpDown1.Enabled = true;//numericUpDown1
                 numericUpDown2.Enabled = false;
                 numericUpDown3.Enabled = false;
                 numericUpDown4.Enabled = false;
             }
-            else
-            {
-                numericUpDown2.Enabled = true;
-                numericUpDown3.Enabled = true;
-                numericUpDown4.Enabled = true;
-            }
-
-            //Rectangle checking
-            if (comboBox1.SelectedIndex == 1)
-            {
-                numericUpDown3.Enabled = false;
-                numericUpDown4.Enabled = false;
-            }
-            else
-            {
-                numericUpDown3.Enabled = true;
-                numericUpDown4.Enabled = true;
-            }
-
-            //Circle checking
-            if (comboBox1.SelectedIndex == 2)
-            {
-                numericUpDown1.Enabled = false;
-                numericUpDown2.Enabled = false;
-                numericUpDown4.Enabled = false;
-            }
-            else
+            else if(comboBox1.SelectedIndex == 1) 
             {
                 numericUpDown1.Enabled = true;
                 numericUpDown2.Enabled = true;
+                numericUpDown3.Enabled = false;
+                numericUpDown4.Enabled = false;
+            }else if(comboBox1.SelectedIndex == 2)
+            {
+                numericUpDown1.Enabled = false;
+                numericUpDown2.Enabled = false;
                 numericUpDown3.Enabled = true;
                 numericUpDown4.Enabled = true;
-            }
-
-            //Trangle checking
-            if (comboBox1.SelectedIndex == 3)
+            }else if(comboBox1.SelectedIndex == 3)
             {
+                numericUpDown1.Enabled = true;
                 numericUpDown2.Enabled = false;
                 numericUpDown3.Enabled = false;
                 numericUpDown4.Enabled = false;
-            }
-            else
+            }else if(comboBox1.SelectedIndex == 4)
             {
+                numericUpDown1.Enabled = false;
                 numericUpDown2.Enabled = true;
-                numericUpDown3.Enabled = true;
-                numericUpDown4.Enabled = true;
+                numericUpDown3.Enabled = false;
+                numericUpDown4.Enabled = false;
+            }else if(comboBox1.SelectedIndex == 5)
+            {
+                numericUpDown1.Enabled = false;
+                numericUpDown2.Enabled = true;
+                numericUpDown3.Enabled = false;
+                numericUpDown4.Enabled = false;
             }
-
-            // use Switch for
+            //else
+            //{
+            //    numericUpDown1.Enabled = true;
+            //    numericUpDown2.Enabled = true;
+            //    numericUpDown3.Enabled = true;
+            //    numericUpDown4.Enabled = true;
+            //}
 
 
         }
@@ -217,5 +207,73 @@ namespace With_AP
             //e.Graphics.FillRectangle(new SolidBrush(Color.Blue), e.Bounds);
             //e.Graphics.DrawString(tabPage.Text, tabControl.Font, new SolidBrush(Color.White), e.Bounds.X + 3, e.Bounds.Y + 3);
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
+
+
+
+/*
+ * //Square checking 
+            if (comboBox1.SelectedIndex == 0)
+            {
+                numericUpDown1.Enabled = true;//numericUpDown1
+                numericUpDown2.Enabled = false;
+                numericUpDown3.Enabled = false;
+                numericUpDown4.Enabled = false;
+            }
+            else
+            {
+                numericUpDown1.Enabled = true;
+                numericUpDown2.Enabled = true;
+                numericUpDown3.Enabled = true;
+                numericUpDown4.Enabled = true;
+            }
+
+            //Rectangle checking
+            if (comboBox1.SelectedIndex == 1)
+            {
+                numericUpDown3.Enabled = false;
+                numericUpDown4.Enabled = false;
+            }
+            else
+            {
+                numericUpDown1.Enabled = true;
+                numericUpDown2.Enabled = true;
+                numericUpDown3.Enabled = true;
+                numericUpDown4.Enabled = true;
+            }
+
+            //Circle checking
+            if (comboBox1.SelectedIndex == 2)
+            {
+                numericUpDown1.Enabled = false;
+                numericUpDown2.Enabled = false;
+                numericUpDown4.Enabled = false;
+            }
+            else
+            {
+                numericUpDown1.Enabled = true;
+                numericUpDown2.Enabled = true;
+                numericUpDown3.Enabled = true;
+                numericUpDown4.Enabled = true;
+            }
+
+            //Trangle checking
+            if (comboBox1.SelectedIndex == 3)
+            {
+                numericUpDown2.Enabled = false;
+                numericUpDown3.Enabled = false;
+                numericUpDown4.Enabled = false;
+            }
+            else
+            {
+                numericUpDown2.Enabled = true;
+                numericUpDown3.Enabled = true;
+                numericUpDown4.Enabled = true;
+            }
+ */
