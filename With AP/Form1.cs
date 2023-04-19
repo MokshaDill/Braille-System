@@ -212,6 +212,13 @@ namespace With_AP
         {
             Application.Exit();
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            MoreDetails md = new MoreDetails();
+            md.ShowDialog();
+
+        }
     }
 }
 
