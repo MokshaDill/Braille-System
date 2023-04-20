@@ -219,6 +219,11 @@ namespace With_AP
             md.ShowDialog();
 
         }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 
