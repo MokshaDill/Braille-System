@@ -83,6 +83,26 @@ namespace With_AP.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _3dprinter_1 {
+            get {
+                object obj = ResourceManager.GetObject("3dprinter_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _3dprinter_11 {
+            get {
+                object obj = ResourceManager.GetObject("3dprinter_11", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _43f8ee9d88f1ddc3535e0f72f7dca73c {
             get {
                 object obj = ResourceManager.GetObject("43f8ee9d88f1ddc3535e0f72f7dca73c", resourceCulture);

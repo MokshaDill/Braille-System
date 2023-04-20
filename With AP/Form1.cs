@@ -1,6 +1,10 @@
+using java.util.logging;
 using Newtonsoft.Json;
 using System.Linq;
+using NLog;
 using static Test_with_AP.Controllers.WeatherForecastController;
+using Logger = NLog.Logger;
+using LogManager = NLog.LogManager;
 
 namespace With_AP
 {
@@ -74,6 +78,7 @@ namespace With_AP
 
         }
 
+       
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
@@ -128,6 +133,7 @@ namespace With_AP
 
         
         private string count;
+        private int countnew;
         private string dotPattern;
         // sync with API 
         private async void GetApi(string url)
@@ -143,8 +149,8 @@ namespace With_AP
                 SquareResult result = JsonConvert.DeserializeObject<SquareResult>(json);
 
                 dotPattern = result.DotPattern;
-                int countint = result.Count;
-                count = Convert.ToString(countint);
+                countnew = result.Count;
+                count = Convert.ToString(countnew);
 
                 
 
@@ -217,20 +223,64 @@ namespace With_AP
 
         private void button4_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            
+            DialogResult result = MessageBox.Show("Are you sure you want to exit?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
+
+        
 
         private void button5_Click(object sender, EventArgs e)
         {
-            MoreDetails md = new MoreDetails(dotPattern, count);
-            md.ShowDialog();
-
+            if(countnew == 0)
+            {
+                MessageBox.Show("The first step is to create the initial Braille pattern using our software.");
+            }
+            else
+            {
+                MoreDetails md = new MoreDetails(dotPattern, count);
+                md.ShowDialog();
+            }
+            
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
 
         }
+
+        public class LoggerManager
+        {
+            private static Logger logger;
+
+            public static Logger Instance
+            {
+                get
+                {
+                    if (logger == null)
+                    {
+                        logger = LogManager.GetCurrentClassLogger();
+                    }
+                    return logger;
+                }
+            }
+        }
+
+        public class BrailleSystem
+        {
+            public void DoSomething()
+            {
+                // Perform some operation
+                LoggerManager.Instance.Debug("DoSomething method called.");
+
+                // Perform another operation
+                LoggerManager.Instance.Info("Another operation performed.");
+            }
+        }
+
     }
 }
 

@@ -47,7 +47,6 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.button4 = new System.Windows.Forms.Button();
@@ -93,7 +92,7 @@
             this.richTextBox1.BackColor = System.Drawing.Color.Snow;
             this.richTextBox1.Cursor = System.Windows.Forms.Cursors.No;
             this.richTextBox1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.richTextBox1.Location = new System.Drawing.Point(436, 95);
+            this.richTextBox1.Location = new System.Drawing.Point(436, 68);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(343, 267);
             this.richTextBox1.TabIndex = 3;
@@ -169,7 +168,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Palatino Linotype", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(436, 61);
+            this.label1.Location = new System.Drawing.Point(561, 37);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(91, 31);
             this.label1.TabIndex = 12;
@@ -260,24 +259,13 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.button2.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button2.Location = new System.Drawing.Point(656, 52);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(123, 43);
-            this.button2.TabIndex = 14;
-            this.button2.Text = "Print";
-            this.button2.UseVisualStyleBackColor = false;
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Gainsboro;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(453, 386);
+            this.label6.Location = new System.Drawing.Point(452, 356);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(189, 25);
             this.label6.TabIndex = 15;
@@ -286,7 +274,7 @@
             // textBox2
             // 
             this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.textBox2.Location = new System.Drawing.Point(638, 386);
+            this.textBox2.Location = new System.Drawing.Point(637, 356);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(125, 27);
             this.textBox2.TabIndex = 16;
@@ -314,11 +302,11 @@
             this.button5.BackColor = System.Drawing.Color.LightSteelBlue;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button5.Location = new System.Drawing.Point(656, 324);
+            this.button5.Location = new System.Drawing.Point(561, 395);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(123, 38);
+            this.button5.Size = new System.Drawing.Size(111, 44);
             this.button5.TabIndex = 18;
-            this.button5.Text = "More Details";
+            this.button5.Text = "NEXT";
             this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
@@ -333,7 +321,6 @@
             this.Controls.Add(this.button4);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.button2);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.richTextBox1);
@@ -379,7 +366,6 @@
         private TabControl tabControl1;
         private TabPage tabPage1;
         private TabPage tabPage2;
-        private Button button2;
         private GroupBox groupBox1;
         private GroupBox groupBox2;
         private TextBox textBox1;
