@@ -12,9 +12,16 @@ namespace With_AP
 {
     public partial class MoreDetails : Form
     {
-        public MoreDetails()
+        private string dotpat;
+        private int count1;
+
+        public MoreDetails(string dotPattern, string count)
         {
             InitializeComponent();
+
+            dotpat = dotPattern;
+            count1 = Convert.ToInt32(count);
+            
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -35,6 +42,8 @@ namespace With_AP
             textBox3.Text = volume.ToString();
             label7.Text = r.ToString();
             label8.Text = h.ToString();
+
+            textBox8.Text = count1.ToString(); 
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -47,7 +56,11 @@ namespace With_AP
             double r = Convert.ToInt32(textBox2.Text);
             double volume = Math.PI * r * r * h;
             int dotcount = 0;
+
+            
         }
+
+     
 
         private void MoreDetails_Load(object sender, EventArgs e)
         {

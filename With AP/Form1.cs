@@ -9,6 +9,7 @@ namespace With_AP
         public Form1()
         {
             InitializeComponent();
+
         }
 
         private void numericUpDown1_ValueChanged(object sender, EventArgs e)
@@ -125,10 +126,14 @@ namespace With_AP
 
         }
 
-
+        
+        private string count;
+        private string dotPattern;
         // sync with API 
         private async void GetApi(string url)
         {
+
+
             try
             {
                 HttpClient client = new HttpClient();
@@ -137,9 +142,11 @@ namespace With_AP
                 String json = await response.Content.ReadAsStringAsync();
                 SquareResult result = JsonConvert.DeserializeObject<SquareResult>(json);
 
-                String dotPattern = result.DotPattern;
+                dotPattern = result.DotPattern;
                 int countint = result.Count;
-                string count = Convert.ToString(countint);
+                count = Convert.ToString(countint);
+
+                
 
                 if (response.IsSuccessStatusCode)
                 {
@@ -215,7 +222,7 @@ namespace With_AP
 
         private void button5_Click(object sender, EventArgs e)
         {
-            MoreDetails md = new MoreDetails();
+            MoreDetails md = new MoreDetails(dotPattern, count);
             md.ShowDialog();
 
         }
