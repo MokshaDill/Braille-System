@@ -150,7 +150,11 @@ namespace With_AP
 
                 dotPattern = result.DotPattern;
                 countnew = result.Count;
+                string dotname = result.Braille;
+                int dotbraille = result.brailledot;
+
                 count = Convert.ToString(countnew);
+                string dotBraille = Convert.ToString(dotbraille);
 
                 
 
@@ -158,6 +162,8 @@ namespace With_AP
                 {
                     richTextBox1.Text = dotPattern;
                     textBox2.Text = count;  
+                    richTextBox2.Text= dotname;
+                    label7.Text = dotBraille;
                 }
                 else
                 {
@@ -167,6 +173,7 @@ namespace With_AP
             catch (Exception ex)
             {
                 richTextBox1.Text = ex.Message;
+                richTextBox2.Text = ex.Message;
             }
 
         }
@@ -252,35 +259,37 @@ namespace With_AP
 
         }
 
-        public class LoggerManager
+        public void DoSomething()
         {
-            private static Logger logger;
+            // Perform some operation
+            LoggerManager.Instance.Debug("DoSomething method called.");
 
-            public static Logger Instance
+            // Perform another operation
+            LoggerManager.Instance.Info("Another operation performed.");
+        }
+
+    }
+
+    public class LoggerManager
+    {
+        private static Logger logger;
+
+        public static Logger Instance
+        {
+            get
             {
-                get
+                if (logger == null)
                 {
-                    if (logger == null)
-                    {
-                        logger = LogManager.GetCurrentClassLogger();
-                    }
-                    return logger;
+                    logger = LogManager.GetCurrentClassLogger();
                 }
+                return logger;
             }
         }
+    }
 
-        public class BrailleSystem
-        {
-            public void DoSomething()
-            {
-                // Perform some operation
-                LoggerManager.Instance.Debug("DoSomething method called.");
-
-                // Perform another operation
-                LoggerManager.Instance.Info("Another operation performed.");
-            }
-        }
-
+    public class BrailleSystem
+    {
+        
     }
 }
 

@@ -51,6 +51,9 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
+            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
@@ -92,9 +95,9 @@
             this.richTextBox1.BackColor = System.Drawing.Color.Snow;
             this.richTextBox1.Cursor = System.Windows.Forms.Cursors.No;
             this.richTextBox1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.richTextBox1.Location = new System.Drawing.Point(436, 68);
+            this.richTextBox1.Location = new System.Drawing.Point(432, 43);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(343, 267);
+            this.richTextBox1.Size = new System.Drawing.Size(343, 255);
             this.richTextBox1.TabIndex = 3;
             this.richTextBox1.Text = "";
             this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
@@ -168,7 +171,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Palatino Linotype", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(561, 37);
+            this.label1.Location = new System.Drawing.Point(561, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(91, 31);
             this.label1.TabIndex = 12;
@@ -265,7 +268,7 @@
             this.label6.BackColor = System.Drawing.Color.Gainsboro;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(452, 356);
+            this.label6.Location = new System.Drawing.Point(432, 310);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(189, 25);
             this.label6.TabIndex = 15;
@@ -274,9 +277,9 @@
             // textBox2
             // 
             this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.textBox2.Location = new System.Drawing.Point(637, 356);
+            this.textBox2.Location = new System.Drawing.Point(619, 310);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(125, 27);
+            this.textBox2.Size = new System.Drawing.Size(156, 27);
             this.textBox2.TabIndex = 16;
             this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
@@ -302,13 +305,44 @@
             this.button5.BackColor = System.Drawing.Color.LightSteelBlue;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button5.Location = new System.Drawing.Point(561, 395);
+            this.button5.Location = new System.Drawing.Point(686, 404);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(111, 44);
+            this.button5.Size = new System.Drawing.Size(112, 43);
             this.button5.TabIndex = 18;
             this.button5.Text = "NEXT";
             this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // richTextBox2
+            // 
+            this.richTextBox2.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.richTextBox2.Location = new System.Drawing.Point(586, 343);
+            this.richTextBox2.Name = "richTextBox2";
+            this.richTextBox2.Size = new System.Drawing.Size(189, 55);
+            this.richTextBox2.TabIndex = 19;
+            this.richTextBox2.Text = "";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Gainsboro;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label5.Location = new System.Drawing.Point(432, 346);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(148, 50);
+            this.label5.TabIndex = 20;
+            this.label5.Text = "Braille Name &\r\nNumber of Dots";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label7.Location = new System.Drawing.Point(739, 357);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(36, 28);
+            this.label7.TabIndex = 21;
+            this.label7.Text = "---";
             // 
             // Form1
             // 
@@ -317,6 +351,9 @@
             this.BackColor = System.Drawing.SystemColors.HotTrack;
             this.BackgroundImage = global::With_AP.Properties.Resources._14292551;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.richTextBox2);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.textBox2);
@@ -374,5 +411,8 @@
         private TextBox textBox2;
         private Button button4;
         private Button button5;
+        private RichTextBox richTextBox2;
+        private Label label5;
+        private Label label7;
     }
 }
