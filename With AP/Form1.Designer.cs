@@ -277,9 +277,9 @@
             // textBox2
             // 
             this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.textBox2.Location = new System.Drawing.Point(619, 310);
+            this.textBox2.Location = new System.Drawing.Point(612, 310);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(156, 27);
+            this.textBox2.Size = new System.Drawing.Size(163, 27);
             this.textBox2.TabIndex = 16;
             this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
@@ -331,7 +331,7 @@
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(148, 50);
             this.label5.TabIndex = 20;
-            this.label5.Text = "Braille Name &\r\nNumber of Dots";
+            this.label5.Text = "Braille Name ,\r\nNumber of Dots";
             // 
             // label7
             // 

@@ -42,32 +42,32 @@ namespace With_AP
             switch (comboBox1.SelectedIndex)
             {
                 case 0:
-                    url = $"https://localhost:44341/WeatherForecast/Square/{h}";
+                    url = $"https://localhost:7286/WeatherForecast/Square/{h}";
                     GetApi(url);
                     break;
 
                 case 1:
-                    url = $"https://localhost:44341/WeatherForecast/rectangle/{w}/{h}";
+                    url = $"https://localhost:7286/WeatherForecast/rectangle/{w}/{h}";
                     GetApi(url);
                     break;
 
                 case 2:
-                    url = $"https://localhost:44341/WeatherForecast/circle/{r}";
+                    url = $"https://localhost:7286/WeatherForecast/circle/{r}";
                     GetApi(url);
                     break;
 
                 case 3:
-                    url = $"https://localhost:44341/WeatherForecast/Trangle/{h}";
+                    url = $"https://localhost:7286/WeatherForecast/Trangle/{h}";
                     GetApi(url);
                     break;
 
                 case 4:
-                    url = $"https://localhost:44341/WeatherForecast/hexagon/{w}";
+                    url = $"https://localhost:7286/WeatherForecast/hexagon/{w}";
                     GetApi(url);
                     break;
 
                 case 5:
-                    url = $"https://localhost:44341/WeatherForecast/octagon/{w}";
+                    url = $"https://localhost:7286/WeatherForecast/octagon/{w}";
                     GetApi(url);
                     break;
             }
@@ -135,6 +135,7 @@ namespace With_AP
         private string count;
         private int countnew;
         private string dotPattern;
+        private string braillename;
         // sync with API 
         private async void GetApi(string url)
         {
@@ -150,7 +151,7 @@ namespace With_AP
 
                 dotPattern = result.DotPattern;
                 countnew = result.Count;
-                string dotname = result.Braille;
+                braillename = result.Braille;
                 int dotbraille = result.brailledot;
 
                 count = Convert.ToString(countnew);
@@ -162,7 +163,7 @@ namespace With_AP
                 {
                     richTextBox1.Text = dotPattern;
                     textBox2.Text = count;  
-                    richTextBox2.Text= dotname;
+                    richTextBox2.Text= braillename;
                     label7.Text = dotBraille;
                 }
                 else
@@ -208,7 +209,7 @@ namespace With_AP
             string tex = textBox1.Text;
 
             string url;
-            url = $"https://localhost:44341/WeatherForecast/text/{tex}";
+            url = $"https://localhost:7286/WeatherForecast/text/{tex}";
             GetApi(url);
         }
 
@@ -248,8 +249,9 @@ namespace With_AP
             }
             else
             {
-                MoreDetails md = new MoreDetails(dotPattern, count);
-                md.ShowDialog();
+                //MoreDetails md = new MoreDetails(dotPattern, count);
+                editPrinter ep = new editPrinter(dotPattern,braillename,countnew);
+                ep.ShowDialog();
             }
             
         }

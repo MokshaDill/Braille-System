@@ -15,12 +15,12 @@ namespace With_AP
         private string dotpat;
         private int count1;
 
-        public MoreDetails(string dotPattern, string count)
+        public MoreDetails(string dotPattern, int count)
         {
             InitializeComponent();
 
             dotpat = dotPattern;
-            count1 = Convert.ToInt32(count);
+            count1 = count;
 
             
             

@@ -21,6 +21,9 @@ namespace Test_with_AP.Controllers
         private string braille = "";
         private int brailledot = 0;
 
+
+
+
         public class SquareResult
         {
             public string DotPattern { get; set; }
@@ -164,7 +167,7 @@ namespace Test_with_AP.Controllers
             int count = 0;
             string tex = "diamond";
 
-            brailledotCounter(tex);
+           brailledotCounter(tex);
 
             int width = size * 2 - 1;
             int height = size * 2 - 1;
@@ -197,8 +200,6 @@ namespace Test_with_AP.Controllers
             var result = new SquareResult { DotPattern = sb.ToString(), Count = count, Braille = braille, brailledot = brailledot };
             return Ok(result);
         }
-
-
 
 
         [HttpGet("hexagon/{size}")]
@@ -282,12 +283,13 @@ namespace Test_with_AP.Controllers
             return Ok(result);
         }
 
+
         private static string[] braille_a_to_z = new string[]
-        {
+       {
             "⠁", "⠃", "⠉", "⠙", "⠑", "⠋", "⠛", "⠓", "⠊", "⠚",
             "⠅", "⠇", "⠍", "⠝", "⠕", "⠏", "⠟", "⠗", "⠎", "⠞",
             "⠥", "⠧", "⠺", "⠭", "⠽", "⠵"
-        };
+       };
 
         private static string[] braille_A_to_Z = new string[]
         {
@@ -310,7 +312,7 @@ namespace Test_with_AP.Controllers
             { '⠽', 5 }, { '⠵', 4 }, { '⠠', 1 }, { ' ', 0 }
         };
 
-
+        [HttpGet]
         public void brailledotCounter(string text)
         {
 
@@ -343,7 +345,6 @@ namespace Test_with_AP.Controllers
                 }
 
             }
-
 
         }
 
