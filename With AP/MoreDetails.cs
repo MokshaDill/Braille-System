@@ -91,8 +91,20 @@ namespace With_AP
                     int dotcount = 0;
 
 
-                    print pin = new print();
-                    pin.ShowDialog();
+                    
+
+                    DialogResult result = MessageBox.Show("Are you sure you want to print it?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                    if (result == DialogResult.Yes)
+                    {
+                        print pin = new print();
+                        pin.ShowDialog();
+
+                    }
+                    else
+                    {
+                        // Do nothing or handle cancellation
+                    }
 
                 }
 

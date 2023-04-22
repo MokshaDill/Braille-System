@@ -2,7 +2,7 @@ using java.util.logging;
 using Newtonsoft.Json;
 using System.Linq;
 using NLog;
-using static Test_with_AP.Controllers.WeatherForecastController;
+using static Test_with_AP.Controllers.BrailleController;
 using Logger = NLog.Logger;
 using LogManager = NLog.LogManager;
 
@@ -42,36 +42,36 @@ namespace With_AP
             switch (comboBox1.SelectedIndex)
             {
                 case 0:
-                    url = $"https://localhost:7286/WeatherForecast/Square/{h}";
+                    url = $"https://localhost:7286/Braille/Square/{h}";
                     GetApi(url);
                     break;
 
                 case 1:
-                    url = $"https://localhost:7286/WeatherForecast/rectangle/{w}/{h}";
+                    url = $"https://localhost:7286/Braille/rectangle/{w}/{h}";
                     GetApi(url);
                     break;
 
                 case 2:
-                    url = $"https://localhost:7286/WeatherForecast/circle/{r}";
+                    url = $"https://localhost:7286/Braille/circle/{r}";
                     GetApi(url);
                     break;
 
                 case 3:
-                    url = $"https://localhost:7286/WeatherForecast/Trangle/{h}";
+                    url = $"https://localhost:7286/Braille/Trangle/{h}";
                     GetApi(url);
                     break;
 
                 case 4:
-                    url = $"https://localhost:7286/WeatherForecast/hexagon/{w}";
+                    url = $"https://localhost:7286/Braille/hexagon/{w}";
                     GetApi(url);
                     break;
 
                 case 5:
-                    url = $"https://localhost:7286/WeatherForecast/octagon/{w}";
+                    url = $"https://localhost:7286/Braille/octagon/{w}";
                     GetApi(url);
                     break;
             }
-        }
+        }//https://localhost:7286/WeatherForecast/rectangle/
 
         private void richTextBox1_TextChanged(object sender, EventArgs e)
         {
@@ -209,7 +209,7 @@ namespace With_AP
             string tex = textBox1.Text;
 
             string url;
-            url = $"https://localhost:7286/WeatherForecast/text/{tex}";
+            url = $"https://localhost:7286/Braille/text/{tex}";
             GetApi(url);
         }
 

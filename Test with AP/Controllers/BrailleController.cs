@@ -15,7 +15,7 @@ namespace Test_with_AP.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class WeatherForecastController : ControllerBase
+    public class BrailleController : ControllerBase
     {
 
         private string braille = "";
