@@ -161,7 +161,7 @@ namespace Test_with_AP.Controllers
 
 
         [HttpGet("octagon/{size}")]
-        public IActionResult GetOctagon(int size)
+        public IActionResult Getdiamond(int size)
         {
             StringBuilder sb = new StringBuilder();
             int count = 0;
@@ -250,7 +250,7 @@ namespace Test_with_AP.Controllers
 
         //text converter
         [HttpGet("text/{tex}")]
-        public IActionResult Square(String tex)
+        public IActionResult Text(String tex)
         {
             //string dotPattern = "";
             string braille = "";

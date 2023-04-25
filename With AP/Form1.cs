@@ -289,10 +289,6 @@ namespace With_AP
         }
     }
 
-    public class BrailleSystem
-    {
-        
-    }
 }
 
 
