@@ -15,6 +15,7 @@ namespace With_AP
         private int countnew;
         private string dotPattern;
         private string braillename;
+        private int dotbraille;
 
 
         public Form1()
@@ -156,7 +157,7 @@ namespace With_AP
                 dotPattern = result.DotPattern;
                 countnew = result.Count;
                 braillename = result.Braille;
-                int dotbraille = result.brailledot;
+                dotbraille = result.brailledot;
 
                 count = Convert.ToString(countnew);
                 string dotBraille = Convert.ToString(dotbraille);
@@ -254,7 +255,7 @@ namespace With_AP
             else
             {
                 //MoreDetails md = new MoreDetails(dotPattern, count);
-                editPrinter ep = new editPrinter(dotPattern,braillename,countnew);
+                editPrinter ep = new editPrinter(dotPattern,braillename,countnew, dotbraille);
                 ep.ShowDialog();
             }
             

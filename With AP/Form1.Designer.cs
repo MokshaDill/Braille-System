@@ -68,7 +68,7 @@
             // 
             this.numericUpDown1.Location = new System.Drawing.Point(107, 43);
             this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(150, 27);
+            this.numericUpDown1.Size = new System.Drawing.Size(150, 31);
             this.numericUpDown1.TabIndex = 0;
             this.numericUpDown1.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
             // 
@@ -76,7 +76,7 @@
             // 
             this.numericUpDown2.Location = new System.Drawing.Point(107, 113);
             this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(150, 27);
+            this.numericUpDown2.Size = new System.Drawing.Size(150, 31);
             this.numericUpDown2.TabIndex = 1;
             this.numericUpDown2.ValueChanged += new System.EventHandler(this.numericUpDown2_ValueChanged);
             // 
@@ -122,7 +122,7 @@
             // 
             this.numericUpDown3.Location = new System.Drawing.Point(107, 179);
             this.numericUpDown3.Name = "numericUpDown3";
-            this.numericUpDown3.Size = new System.Drawing.Size(150, 27);
+            this.numericUpDown3.Size = new System.Drawing.Size(150, 31);
             this.numericUpDown3.TabIndex = 5;
             this.numericUpDown3.ValueChanged += new System.EventHandler(this.numericUpDown3_ValueChanged);
             // 
@@ -130,10 +130,11 @@
             // 
             this.Shapes.AutoSize = true;
             this.Shapes.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Shapes.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.Shapes.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Shapes.Location = new System.Drawing.Point(174, 16);
+            this.Shapes.Location = new System.Drawing.Point(173, 11);
             this.Shapes.Name = "Shapes";
-            this.Shapes.Size = new System.Drawing.Size(56, 20);
+            this.Shapes.Size = new System.Drawing.Size(72, 25);
             this.Shapes.TabIndex = 7;
             this.Shapes.Text = "Shapes";
             this.Shapes.Click += new System.EventHandler(this.label1_Click);
@@ -143,7 +144,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(23, 43);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(54, 20);
+            this.label2.Size = new System.Drawing.Size(70, 25);
             this.label2.TabIndex = 8;
             this.label2.Text = "Height";
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -153,7 +154,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(23, 113);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(49, 20);
+            this.label3.Size = new System.Drawing.Size(64, 25);
             this.label3.TabIndex = 9;
             this.label3.Text = "Width";
             // 
@@ -162,7 +163,7 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(23, 179);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(53, 20);
+            this.label4.Size = new System.Drawing.Size(69, 25);
             this.label4.TabIndex = 10;
             this.label4.Text = "Radius";
             // 
@@ -182,16 +183,18 @@
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Font = new System.Drawing.Font("Segoe UI Black", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.tabControl1.Location = new System.Drawing.Point(0, -1);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.Padding = new System.Drawing.Point(77, 15);
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(408, 452);
+            this.tabControl1.Size = new System.Drawing.Size(426, 452);
             this.tabControl1.TabIndex = 13;
             // 
             // tabPage1
             // 
-            this.tabPage1.BackgroundImage = global::With_AP.Properties.Resources._43f8ee9d88f1ddc3535e0f72f7dca73c1;
+            this.tabPage1.BackgroundImage = global::With_AP.Properties.Resources._1280px_Braille_text;
+            this.tabPage1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tabPage1.Controls.Add(this.groupBox1);
             this.tabPage1.Controls.Add(this.comboBox1);
             this.tabPage1.Controls.Add(this.Shapes);
@@ -199,19 +202,22 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 53);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(400, 395);
+            this.tabPage1.Size = new System.Drawing.Size(418, 395);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Shape";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.numericUpDown3);
             this.groupBox1.Controls.Add(this.numericUpDown1);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.numericUpDown2);
             this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.groupBox1.Location = new System.Drawing.Point(58, 77);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(284, 233);

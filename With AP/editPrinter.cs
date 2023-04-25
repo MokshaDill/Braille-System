@@ -15,13 +15,15 @@ namespace With_AP
         private string shapedot_p;
         private string braille_name;
         private int count;
-        public editPrinter(string dotPattern,string braillename, int countx)
+        private int count2;
+        public editPrinter(string dotPattern,string braillename, int countx,int dotBraille)
         {
             InitializeComponent();
 
             shapedot_p= dotPattern;
             braille_name = braillename;
             count = countx;
+            count2 = dotBraille;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -41,8 +43,9 @@ namespace With_AP
 
         private void button2_Click(object sender, EventArgs e)
         {
-            MoreDetails mr = new MoreDetails(shapedot_p, count);
+            MoreDetails mr = new MoreDetails(shapedot_p, count,count2);
             mr.ShowDialog();
+            this.Hide();
         }
     }
 }

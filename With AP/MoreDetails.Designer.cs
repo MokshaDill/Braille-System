@@ -59,6 +59,8 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.button3 = new System.Windows.Forms.Button();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -219,6 +221,7 @@
             // 
             this.textBox1.Location = new System.Drawing.Point(579, 50);
             this.textBox1.Name = "textBox1";
+            this.textBox1.PlaceholderText = "mm";
             this.textBox1.Size = new System.Drawing.Size(125, 27);
             this.textBox1.TabIndex = 16;
             // 
@@ -226,6 +229,7 @@
             // 
             this.textBox2.Location = new System.Drawing.Point(579, 83);
             this.textBox2.Name = "textBox2";
+            this.textBox2.PlaceholderText = "mm";
             this.textBox2.Size = new System.Drawing.Size(125, 27);
             this.textBox2.TabIndex = 17;
             // 
@@ -233,6 +237,7 @@
             // 
             this.textBox3.Location = new System.Drawing.Point(579, 151);
             this.textBox3.Name = "textBox3";
+            this.textBox3.PlaceholderText = "mm2";
             this.textBox3.Size = new System.Drawing.Size(125, 27);
             this.textBox3.TabIndex = 18;
             // 
@@ -240,6 +245,7 @@
             // 
             this.textBox4.Location = new System.Drawing.Point(164, 33);
             this.textBox4.Name = "textBox4";
+            this.textBox4.PlaceholderText = "mm";
             this.textBox4.Size = new System.Drawing.Size(102, 27);
             this.textBox4.TabIndex = 19;
             // 
@@ -247,6 +253,7 @@
             // 
             this.textBox5.Location = new System.Drawing.Point(164, 66);
             this.textBox5.Name = "textBox5";
+            this.textBox5.PlaceholderText = "mms-1";
             this.textBox5.Size = new System.Drawing.Size(102, 27);
             this.textBox5.TabIndex = 20;
             // 
@@ -254,6 +261,7 @@
             // 
             this.textBox6.Location = new System.Drawing.Point(201, 96);
             this.textBox6.Name = "textBox6";
+            this.textBox6.PlaceholderText = "C";
             this.textBox6.Size = new System.Drawing.Size(65, 27);
             this.textBox6.TabIndex = 21;
             // 
@@ -261,6 +269,7 @@
             // 
             this.textBox7.Location = new System.Drawing.Point(199, 129);
             this.textBox7.Name = "textBox7";
+            this.textBox7.PlaceholderText = "<";
             this.textBox7.Size = new System.Drawing.Size(67, 27);
             this.textBox7.TabIndex = 22;
             // 
@@ -336,6 +345,24 @@
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(310, 65);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(35, 20);
+            this.label16.TabIndex = 31;
+            this.label16.Text = "mm";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(105, 208);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(35, 20);
+            this.label17.TabIndex = 32;
+            this.label17.Text = "mm";
+            // 
             // MoreDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -343,6 +370,8 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(801, 450);
+            this.Controls.Add(this.label17);
+            this.Controls.Add(this.label16);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.textBox9);
             this.Controls.Add(this.label15);
@@ -410,5 +439,7 @@
         private GroupBox groupBox1;
         private GroupBox groupBox2;
         private Button button3;
+        private Label label16;
+        private Label label17;
     }
 }

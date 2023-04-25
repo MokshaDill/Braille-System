@@ -14,16 +14,17 @@ namespace With_AP
     {
         private string dotpat;
         private int count1;
+        private int count2;
+        private int tolcount;
 
-        public MoreDetails(string dotPattern, int count)
+        public MoreDetails(string dotPattern, int count, int dotBraille)
         {
             InitializeComponent();
 
             dotpat = dotPattern;
             count1 = count;
+            count2 = dotBraille;
 
-            
-            
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -51,9 +52,23 @@ namespace With_AP
                 label7.Text = r.ToString();
                 label8.Text = h.ToString();
 
-                double tolvol1 = volume * count1;
-                double tolvol = Math.Round(tolvol1,3);
+                //shape dots count + name dot count
+                tolcount = count1 + count2;
 
+                //text part volume
+                double textpart = 50;
+
+                //total dot volume
+                double tolvol1 = volume * tolcount;
+
+                //add text part to dots volume
+                double tolvolume = tolvol1 + textpart;
+
+                //round the volume
+                double tolvol = Math.Round(tolvolume,3);
+
+               
+                //display volume
                 textBox9.Text = tolvol.ToString();
             }
             catch (FormatException)
@@ -64,7 +79,7 @@ namespace With_AP
             
 
             //show dot count
-            textBox8.Text = count1.ToString();
+            textBox8.Text = tolcount.ToString();
 
             //show dot pattern in rich box
             //richTextBox1.Text = dotpat;

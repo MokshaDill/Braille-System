@@ -63,6 +63,16 @@ namespace With_AP.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _1280px_Braille_text {
+            get {
+                object obj = ResourceManager.GetObject("1280px-Braille_text", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _1429255 {
             get {
                 object obj = ResourceManager.GetObject("1429255", resourceCulture);
