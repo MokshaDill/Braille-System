@@ -10,6 +10,13 @@ namespace With_AP
 {
     public partial class Form1 : Form
     {
+
+        private string count;
+        private int countnew;
+        private string dotPattern;
+        private string braillename;
+
+
         public Form1()
         {
             InitializeComponent();
@@ -132,10 +139,7 @@ namespace With_AP
         }
 
         
-        private string count;
-        private int countnew;
-        private string dotPattern;
-        private string braillename;
+        
         // sync with API 
         private async void GetApi(string url)
         {
