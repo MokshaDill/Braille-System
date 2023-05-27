@@ -8,10 +8,10 @@ From a drop-down list, users can choose from a variety of standard formats, or t
 The main goal of this project is to create and put into use a tool that can print out different shapes and types of text so that blind people can touch and feel the results.
 Designing and implementing the tool for this service should adhere to best practices and design patterns. The client and service communicate with one another using HTTP. It is implemented using.NET.This project's overarching goal is to give blind people a new mode of interaction with their environment.
 Our project's business goals include: 
-• Offering a fresh perspective on visual information.
-• enhancing the business's reputation.
-• Boost revenue by offering the tool for sale.
-• Acquiring knowledge for the development of assistive technologies.
+* Offering a fresh perspective on visual information.
+* enhancing the business's reputation.
+* Boost revenue by offering the tool for sale.
+* Acquiring knowledge for the development of assistive technologies.
 
 # ScreenShot
 
@@ -37,9 +37,9 @@ Our project's business goals include:
 
 # Future Suggestion
 
-• Braille technology makes it easier and more cost-effective to use.
-• More compact and portable Braille screens should be developed for the benefit of blind people.
-• Technology to create Braille signs and use it in public areas.
+* Braille technology makes it easier and more cost-effective to use.
+* More compact and portable Braille screens should be developed for the benefit of blind people.
+* Technology to create Braille signs and use it in public areas.
 
 # Used Languages
 * C# Language
