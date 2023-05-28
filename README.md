@@ -16,25 +16,24 @@ Our project's business goals include:
 
 # ScreenShot
 
-![image](https://github.com/MokshaDill/Braille-System/assets/97075043/d900268e-ec47-4eb8-93b2-d04d59e783ae)
+![image](https://github.com/MokshaDill/Braille-System/assets/97075043/c6229341-9926-4fee-8f68-001821fd7943)
 
-![image](https://github.com/MokshaDill/Braille-System/assets/97075043/bc165128-49ea-44df-aa8b-2be6c3710fa0)
+![image](https://github.com/MokshaDill/Braille-System/assets/97075043/51459696-ad59-49ff-a35a-f3c540d75b0c)
 
-![image](https://github.com/MokshaDill/Braille-System/assets/97075043/3c1eede4-5660-4cc3-8de0-5c5df1f907f5)
+![image](https://github.com/MokshaDill/Braille-System/assets/97075043/e6257ddc-640b-4dbc-9ab4-089a3c8ecee7)
 
-![image](https://github.com/MokshaDill/Braille-System/assets/97075043/ffa0c21a-a9ce-47e8-9137-03bd9dc88aaa)
+![image](https://github.com/MokshaDill/Braille-System/assets/97075043/6430aee6-e33c-4d5a-8d10-1a266c80c30b)
 
-![image](https://github.com/MokshaDill/Braille-System/assets/97075043/438f172b-5e66-4c85-bfb0-1b8d9d8fdef6)
-
-![image](https://github.com/MokshaDill/Braille-System/assets/97075043/4ec247c1-47af-40f9-bece-02b1017da679)
+![image](https://github.com/MokshaDill/Braille-System/assets/97075043/1ca5f956-4632-4e0f-a373-330f53517579)
 
 # API Testing Result - Postman
 
-![image](https://github.com/MokshaDill/Braille-System/assets/97075043/4d0a8cb7-d49d-4b56-a7bf-5ea0aec989ee)
+![image](https://github.com/MokshaDill/Braille-System/assets/97075043/a75e10fc-1c5d-42ac-96c5-d107c62f4094)
 
-![image](https://github.com/MokshaDill/Braille-System/assets/97075043/18951eb0-b199-4fbe-9a01-94ef0079335a)
+![image](https://github.com/MokshaDill/Braille-System/assets/97075043/89bcce0d-3366-4be5-ba7a-7310dc45c48e)
 
-![image](https://github.com/MokshaDill/Braille-System/assets/97075043/2df0b373-2990-4c1d-bed6-0a23bfbf2bb3)
+![image](https://github.com/MokshaDill/Braille-System/assets/97075043/2825052a-4b15-4bbd-a4d0-038a2f5719b8)
+
 
 # Future Suggestion
 
