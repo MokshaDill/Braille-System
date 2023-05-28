@@ -61,7 +61,7 @@ Our project's business goals include:
 
 # Thank you 😃
 
-( If you like this project just click ⭐ and share it with others.)
+If you like this project just click ⭐ and share it with others.
 
 
 
